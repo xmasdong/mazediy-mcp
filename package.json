@@ -1,0 +1,52 @@
+{
+  "name": "mazediy-mcp",
+  "version": "1.0.1",
+  "description": "MCP server and open dataset for printable mazes: generate mazes in any shape or country outline, with answer keys, and search 2,000+ free printable mazes from MazeDIY. Also hosted at https://mazediy.com/mcp.",
+  "mcpName": "io.github.xmasdong/mazediy-mcp",
+  "type": "module",
+  "bin": {
+    "mazediy-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "data/country-shapes.json",
+    "data/printable-mazes.json"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "dataset": "npm run build && node scripts/build-dataset.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "maze",
+    "maze-generator",
+    "printable-mazes",
+    "maze-dataset",
+    "country-maps",
+    "puzzle",
+    "education"
+  ],
+  "homepage": "https://mazediy.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmasdong/mazediy-mcp.git"
+  },
+  "bugs": "https://github.com/xmasdong/mazediy-mcp/issues",
+  "license": "MIT",
+  "author": "MazeDIY (https://mazediy.com)",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.xmasdong/mazediy-mcp",
+  "description": "Generate printable mazes in any shape or country outline, with answer keys.",
+  "repository": {
+    "url": "https://github.com/xmasdong/mazediy-mcp",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "mazediy-mcp",
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "title": "MazeDIY Maze Generator",
+  "websiteUrl": "https://mazediy.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mazediy.com/mcp"
+    }
+  ]
+}
